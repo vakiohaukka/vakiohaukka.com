@@ -1,0 +1,184 @@
+/
+├── index.html
+├── vihjeet.html
+├── recap.html
+├── blog.html
+├── meista.html
+├── css/
+│   └── style.css
+└── images/
+    ├── bg-green.png        (vihreä gradientti)
+    ├── hawk-logo.png       (musta haukka)
+    └── banner.png          (VAKIO HAUKKA -banneri)
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vakiohaukka</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="hero">
+  <nav class="nav">
+    <div class="logo">
+      <img src="images/hawk-logo.png" alt="Vakiohaukka logo">
+    </div>
+    <ul>
+      <li><a href="index.html">Etusivu</a></li>
+      <li><a href="vihjeet.html">Vakio-vihjeet</a></li>
+      <li><a href="recap.html">Viikon recap</a></li>
+      <li><a href="blog.html">Blogi</a></li>
+      <li><a href="meista.html">Meistä</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner">
+    <img src="images/banner.png" alt="Vakiohaukka">
+  </div>
+</header>
+
+<main class="content">
+  <section class="card">
+    <h2>Tervetuloa Vakiohaukkaan</h2>
+    <p>
+      Vakiohaukka tarjoaa analyysiin perustuvia vakio- ja vedonlyöntivihjeitä.
+      Tavoitteena on pitkäjänteinen ja kurinalainen pelaaminen.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Uusimmat vihjeet</h2>
+    <p>
+      Seuraa viikon kohteet ja analyysit alasivuilta.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© Vakiohaukka</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vakio-vihjeet – Vakiohaukka</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="sub-hero">
+  <nav class="nav">
+    <div class="logo">
+      <img src="images/hawk-logo.png" alt="Vakiohaukka logo">
+    </div>
+    <ul>
+      <li><a href="index.html">Etusivu</a></li>
+      <li><a href="vihjeet.html" class="active">Vakio-vihjeet</a></li>
+      <li><a href="recap.html">Viikon recap</a></li>
+      <li><a href="blog.html">Blogi</a></li>
+      <li><a href="meista.html">Meistä</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+  <section class="card">
+    <h2>Vakio-vihjeet</h2>
+    <p>Tänne tulevat viikon kohteet ja perustelut.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© Vakiohaukka</p>
+</footer>
+
+</body>
+</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0e1f17;
+  color: #ffffff;
+}
+
+.hero {
+  background: url("../images/bg-green.png") center/cover no-repeat;
+  padding-bottom: 40px;
+}
+
+.sub-hero {
+  background: linear-gradient(135deg, #0b3d2a, #062218);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a.active,
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.hero-banner img {
+  max-width: 90%;
+  height: auto;
+}
+
+.content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 32px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #000;
+  font-size: 14px;
+  opacity: 0.8;
+}
